@@ -107,11 +107,19 @@ def get_sum_zero_pairs(numbers):
             result = numbers[count] + numbers[i]
             if result == 0:
                 zero_sum_pairs.append([numbers[count], numbers[i]])
-            counter += 1
+            cou
+            ]nter += 1
         count += 1
         print zero_sum_pairs
 
     return zero_sum_pairs
+
+
+
+
+
+
+
 
     
 output = get_sum_zero_pairs([1, 3, -1, 1, 1, 0])
