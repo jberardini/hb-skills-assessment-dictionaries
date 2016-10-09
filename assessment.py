@@ -213,7 +213,43 @@ def kids_game(names):
     good solutions here will definitely require a dictionary.
     """
 
-    return []
+    #Start with the first word
+    #Find the last letter
+    #Find the first word starting with the last letter in a list
+    #Repeat until there are no more words with the last letter
+
+    last_letter_lookup = {}
+    
+
+    for name in names:
+        name_length = len(name)
+        last_letter_lookup[name] = name[name_length-1]
+
+    current_word = names[0]
+    last_letters = last_letter_lookup.values()
+    new_first_letter = last_letter_lookup[current_word]
+    results = [current_word]
+
+    while new_first_letter in last_letters:
+        try:
+            names.remove(current_word)
+        except ValueError:
+            break
+        for i in range(len(names)):
+            if new_first_letter != names[i][0]:
+                pass
+            else:
+                new_first_letter = last_letter_lookup[names[i]]
+                current_word = names[i]
+                results.append(current_word)
+                break
+    return results
+
+
+kids_game(['bagon', 'baltoy', 'yamask', 'starly', 'nosepass', 'kalob', 'nicky'])
+
+
+    # return results
 
 #####################################################################
 # You can ignore everything below this.
