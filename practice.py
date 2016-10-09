@@ -106,11 +106,11 @@ def get_sum_zero_pairs(numbers):
         for i in range(len(numbers)):
             result = numbers[count] + numbers[i]
             if result == 0:
-                zero_sum_pairs.append([numbers[count], numbers[i]])
-            cou
-            ]nter += 1
+                new_pair = sorted([numbers[count], numbers[i]])
+                if new_pair not in zero_sum_pairs:
+                    zero_sum_pairs.append(new_pair)
         count += 1
-        print zero_sum_pairs
+
 
     return zero_sum_pairs
 
