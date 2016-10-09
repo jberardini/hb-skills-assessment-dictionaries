@@ -97,7 +97,6 @@ def get_sum_zero_pairs(numbers):
     """
 
     numbers = list(set(numbers))
-    counter = 0
     zero_sum_pairs = []
 
 
@@ -114,16 +113,6 @@ def get_sum_zero_pairs(numbers):
 
     return zero_sum_pairs
 
-
-
-
-
-
-
-
-    
-output = get_sum_zero_pairs([1, 3, -1, 1, 1, 0])
-print output
 
 
 def top_chars(phrase):
